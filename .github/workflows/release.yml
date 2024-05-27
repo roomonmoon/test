@@ -11,6 +11,9 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Clone GitHub Repository
+        uses: actions/checkout@v3
+
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
@@ -29,6 +32,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: Clone GitHub Repository
+        uses: actions/checkout@v3
+        
       - name: Set up Python 3.12
         uses: actions/setup-python@v5
         with:
