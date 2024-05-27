@@ -28,7 +28,7 @@ jobs:
 
       - name: Active environment
         run: |
-          poetry env use python3.12
+          poetry env use python
       - name: test
         run: |
           flet --version
