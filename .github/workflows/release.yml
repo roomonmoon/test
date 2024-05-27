@@ -1,0 +1,43 @@
+name: Release new version of Application
+
+on:
+    push:
+        branches: [ "master" ]
+
+jobs:
+
+  build_windows:
+    name: Build Windows App
+    runs-on: windows-latest
+
+    steps:
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+    
+      - name: Getting poetry packet manager
+        uses: abatilo/actions-poetry@v3.0.0
+    
+      - name: Install Dependencies
+        run: |
+          poetry env use python3.12
+          poetry shell
+
+  build_linux:
+    name: Build Linux App
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+        
+      - name: Getting poetry packet manager
+        uses: abatilo/actions-poetry@v3.0.0
+
+      - name: Install Depe
+        run: |
+          poetry env use python3.12
+          poetry shell
