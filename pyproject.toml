@@ -6,7 +6,6 @@ authors = ["Sergey Degtyar <sergeydegtyar@internet.ru>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-Telethon = "^1.35.0"
 flet = "^0.22.1"
 
 [tool.poetry.dev-dependencies]

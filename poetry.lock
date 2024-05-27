@@ -379,22 +379,6 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
-name = "pyaes"
-version = "1.6.1"
-description = "Pure-Python Implementation of the AES block-cipher and common modes of operation"
-category = "main"
-optional = false
-python-versions = "*"
-
-[[package]]
-name = "pyasn1"
-version = "0.6.0"
-description = "Pure-Python implementation of ASN.1 types and DER/BER/CER codecs (X.208)"
-category = "main"
-optional = false
-python-versions = ">=3.8"
-
-[[package]]
 name = "pydantic"
 version = "2.7.1"
 description = "Data validation using Python type hints"
@@ -560,17 +544,6 @@ pygments = ">=2.13.0,<3.0.0"
 jupyter = ["ipywidgets (>=7.5.1,<9)"]
 
 [[package]]
-name = "rsa"
-version = "4.9"
-description = "Pure-Python RSA implementation"
-category = "main"
-optional = false
-python-versions = ">=3.6,<4"
-
-[package.dependencies]
-pyasn1 = ">=0.1.3"
-
-[[package]]
 name = "shellingham"
 version = "1.5.4"
 description = "Tool to Detect Surrounding Shell"
@@ -607,21 +580,6 @@ anyio = ">=3.4.0,<5"
 
 [package.extras]
 full = ["httpx (>=0.22.0)", "itsdangerous", "jinja2", "python-multipart (>=0.0.7)", "pyyaml"]
-
-[[package]]
-name = "telethon"
-version = "1.35.0"
-description = "Full-featured Telegram client library for Python 3"
-category = "main"
-optional = false
-python-versions = ">=3.5"
-
-[package.dependencies]
-pyaes = "*"
-rsa = "*"
-
-[package.extras]
-cryptg = ["cryptg"]
 
 [[package]]
 name = "text-unidecode"
@@ -751,7 +709,7 @@ python-versions = ">=3.8"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.10"
-content-hash = "c353268edcfb704a5bd47c8448275f7685583bb06e081867dc9bb40538816e8a"
+content-hash = "fe109b508024693b77c4b2b8b0cb6ff9f38618a0de0c9cecc818acbcc8e05d94"
 
 [metadata.files]
 annotated-types = []
@@ -784,8 +742,6 @@ mdurl = []
 oauthlib = []
 orjson = []
 packaging = []
-pyaes = []
-pyasn1 = []
 pydantic = []
 pydantic-core = []
 pygments = []
@@ -799,12 +755,10 @@ qrcode = []
 repath = []
 requests = []
 rich = []
-rsa = []
 shellingham = []
 six = []
 sniffio = []
 starlette = []
-telethon = []
 text-unidecode = []
 typer = []
 types-python-dateutil = []
