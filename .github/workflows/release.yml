@@ -42,6 +42,11 @@ jobs:
       - name: Getting poetry packet manager
         uses: abatilo/actions-poetry@v3.0.0
 
+      - name: Setup a local virtual environment (if no poetry.toml file)
+        run: |
+          poetry config virtualenvs.create true --local
+          poetry config virtualenvs.in-project true --local
+
       - name: Install Depe
         run: |
           poetry install
