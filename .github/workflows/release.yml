@@ -45,3 +45,6 @@ jobs:
       - name: Install Depe
         run: |
           poetry install
+      - name: test
+        run: |
+          flet --version
