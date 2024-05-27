@@ -28,41 +28,10 @@ jobs:
 
       - name: Active environment
         run: |
-          source $(poetry env info --path)/bin/activate
+          $(poetry env info --path)/bin/activate
           echo "$VIRTUAL_ENV/bin" >> $GITHUB_PATH
           echo "PYTHONHOME=" >> $GITHUB_ENV
   
-      - name: test
-        run: |
-          flet --version
-
-
-  build_linux:
-    name: Build Linux App
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Clone GitHub Repository
-        uses: actions/checkout@v3
-        
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-        
-      - name: Getting poetry packet manager
-        uses: abatilo/actions-poetry@v3.0.0
-
-      - name: Install Dependencies
-        run: |
-          poetry install
-
-      - name: Active environment
-        run: |
-          source $(poetry env info --path)/bin/activate
-          echo "$VIRTUAL_ENV/bin" >> $GITHUB_PATH
-          echo "PYTHONHOME=" >> $GITHUB_ENV
-
       - name: test
         run: |
           flet --version
